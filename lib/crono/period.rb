@@ -78,7 +78,7 @@ module Crono
     end
 
     def time_atts
-      { hour: @at_hour, min: @at_min }.compact
+      { hour: @at_hour, min: @at_min }.select{ |_, value| !value.nil? }
     end
   end
 end
